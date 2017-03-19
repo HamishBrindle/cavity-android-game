@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.brindle.cavitygame.model.Inventory;
 import com.brindle.cavitygame.model.Page;
 import com.brindle.cavitygame.model.Story;
 import com.brindle.cavitygame.R;
@@ -26,6 +27,9 @@ public class StoryActivity extends Activity {
     private Button mChoice2;
     private String mName;
     private Page mCurrentPage;
+    private Inventory mInventory;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,12 +49,27 @@ public class StoryActivity extends Activity {
         mChoice1 = (Button) findViewById(R.id.choiceButton1);
         mChoice2 = (Button) findViewById(R.id.choiceButton2);
 
+        mInventory = new Inventory();
+
         loadPage(0);
 
     }
 
     private void loadPage(int index) {
+
         mCurrentPage = mStory.getPage(index);
+
+
+        // If has Pendant, change outcome of page.
+        if (index == 8 && mInventory.hasPendant()) {
+            mCurrentPage = mStory.getPage(9);
+        }
+
+        // If on Pendant page, set hasPendant
+        if (index == 15) {
+            Toast.makeText(this, "Got Pendant", Toast.LENGTH_SHORT).show();
+            mInventory.setPendant(true);
+        }
 
         Drawable drawable = getResources().getDrawable(mCurrentPage.getImageId());
         mImageView.setImageDrawable(drawable);
@@ -62,7 +81,7 @@ public class StoryActivity extends Activity {
 
         if (mCurrentPage.isFinal()) {
             mChoice1.setVisibility(View.INVISIBLE);
-            mChoice2.setText("PLAY AGAIN");
+            mChoice2.setText("TRY AGAIN");
             mChoice2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

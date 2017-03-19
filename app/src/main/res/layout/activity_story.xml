@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="You continue your course to Earth. Two days later, you receive a transmission from HQ saying that they have detected some sort of anomaly on the surface of Mars near an abandoned rover. They ask you to investigate, but ultimately the decision is yours because your mission has already run much longer than planned and supplies are low."
+        android:text=""
         android:id="@+id/storyTextView"
         android:layout_below="@+id/storyImageView"
         android:layout_alignLeft="@+id/storyImageView"
@@ -33,7 +33,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Stop and investigate"
+        android:text=""
         android:id="@+id/choiceButton2"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -44,7 +44,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Continue home to Earth"
+        android:text=""
         android:id="@+id/choiceButton1"
         android:layout_above="@+id/choiceButton2"
         android:layout_alignLeft="@+id/choiceButton2"

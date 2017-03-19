@@ -21,6 +21,7 @@ public class Page {
         mChoice2 = null;
         mIsFinal = true;
     }
+
     public boolean isFinal() {
         return mIsFinal;
     }
@@ -28,7 +29,6 @@ public class Page {
     public void setFinal(boolean isFinal) {
         mIsFinal = isFinal;
     }
-
 
     public int getImageId() {
         return mImageId;

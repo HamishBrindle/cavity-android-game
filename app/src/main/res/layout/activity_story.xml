@@ -31,24 +31,24 @@
         />
 
     <Button
+        android:id="@+id/choiceButton2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        android:id="@+id/choiceButton2"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="@android:color/white"
-        android:textColor="#ff3a8aec"/>
+        android:text=""
+        android:textColor="@color/colorPrimary"/>
 
     <Button
+        android:id="@+id/choiceButton1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        android:id="@+id/choiceButton1"
         android:layout_above="@+id/choiceButton2"
         android:layout_alignLeft="@+id/choiceButton2"
         android:layout_alignStart="@+id/choiceButton2"
         android:background="@android:color/white"
-        android:textColor="#FF3A8AEC"/>
+        android:text=""
+        android:textColor="@color/colorPrimary"/>
 </RelativeLayout>

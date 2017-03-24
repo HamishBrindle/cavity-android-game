@@ -139,7 +139,7 @@ public class Story {
 
         // DEAD END PAGES
         mPages[18] = new Page(
-                R.drawable.page5,
+                R.drawable.main_title,
                 "To be continued.");
 
     }
